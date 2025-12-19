@@ -1,0 +1,158 @@
+:root {
+  --main-bg: #090a12;
+  --panel-bg: rgba(14, 15, 20, 0.8);
+  --border-color: #00317b;
+  --accent-color: #00bbd4e8; /* สีฟ้าอ่อน */
+  --text-color: #d1d4e0;
+  --glow-color-light: #00317b;
+  --glow-color-dark: #00317b;
+}
+
+.solo-leveling-card {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--main-bg);
+  border: 3px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 25, 212, 0.77),
+    inset 0 0 15px var(--glow-color-dark);
+  color: var(--text-color);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5em;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+/*  GRID LAYOUT */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* PANEL STYLING (กรอบ/กล่องข้อมูล) */
+.panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.panel-title {
+  font-size: 0.75em;
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--border-color);
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+/* CHARACTER PANEL */
+.character-panel {
+  grid-column: span 1;
+}
+
+.character-display {
+  background-color: #000;
+  border: 1px solid var(--glow-color-light);
+  height: 160px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.aka-box {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.stats-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.stat-name {
+  color: var(--text-color);
+}
+
+.stat-value {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/*  GOALS PANEL */
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goals-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 0.9em;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+}
+
+.goal-name {
+  letter-spacing: 0.5px;
+}
+
+.goal-check {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 0.9em;
+}
+
+.goal-check.checked {
+  border-color: var(--accent-color);
+  background-color: rgba(0, 188, 212, 0.2);
+  box-shadow: 0 0 5px var(--accent-color);
+}
