@@ -6,15 +6,25 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
     url("/images/image.png");
   background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg-color {
   background: #000000; /* fallback for old browsers */
 }
+
+.border--1 {
+  border: #00317b 2px solid;
+}
 .ms--5 {
   margin-left: 10px;
 }
-.bg--white {
+.bg--color {
   background-color: #090a12;
   color: #00bbd4e8;
 }
